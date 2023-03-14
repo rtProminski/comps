@@ -1,31 +1,45 @@
 import Button from './Button'
-const App = () => {
+import { HiStar } from 'react-icons/hi'
+
+function App() {
+	const handleClick = () => {
+		alert('click button')
+	}
+
 	return (
 		<div>
 			<div>
-				<Button success rounded outline>
+				<Button secondary outline rounded addedStyles={'mb-5 ml-3 mt-2'}>
+					<HiStar />
 					Click me!!
 				</Button>
 			</div>
 			<div>
 				<Button danger outline>
+					<HiStar />
 					Buy Now!
 				</Button>
 			</div>
 			<div>
-				<Button warning>See Deal!</Button>
+				<Button warning>
+					<HiStar />
+					See Deal!
+				</Button>
 			</div>
 			<div>
 				<Button secondary outline>
+					<HiStar />
 					Hide Ads!
 				</Button>
 			</div>
 			<div>
-				<Button primary rounded>
+				<Button onClick={handleClick} primary rounded>
+					<HiStar />
 					Something!
 				</Button>
 			</div>
 		</div>
 	)
 }
+
 export default App
